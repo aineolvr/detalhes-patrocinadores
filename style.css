@@ -1195,6 +1195,7 @@ tbody  td{
     width: 350px;
     height: 48px;
    margin-bottom: 10px;
+   align-items: center;
 }
 
 .input-group-left {
