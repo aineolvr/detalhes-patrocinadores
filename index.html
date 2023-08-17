@@ -238,6 +238,8 @@
 
     </div><!--content-options-->
 
+
+
     <!--SECTION INPUTS E BTN EDITAR-->
 
     <div class="container">
@@ -300,7 +302,6 @@
        </div>
 
     </div><!--container-->
-        
 
 
 <!--BUTTON SOLO +NOVO LIMITE PARA OUTRO DIA-->
@@ -308,7 +309,7 @@
 <div class="btn-solo">
 
   <div class="mdc-touch-target-wrapper">
-                <button class="mdc-button mdc-button--touch " style="color: white; background-color: black; border: 1px solid black; "  >
+                <button id="btn-novo-limite" class="mdc-button mdc-button--touch " style="color: white; background-color: black; border: 1px solid black; "  >
                   <span class="mdc-button__ripple"></span>
                   <span class="mdc-button__touch"></span>
                   <span class="mdc-button__label">+ Novo limite para outro dia</span>
@@ -474,11 +475,14 @@
 </div>
 
 
+
+
+
 <!--comecando modal de editar elementos-->
 
 
     
-<div class="mdc-dialog  mdc-dialog--fullscreen">
+<div class="mdc-dialog  mdc-dialog--fullscreen" id="meu-modal1">
   <div class="mdc-dialog__container ">
     <div class="mdc-dialog__surface"
       role="dialog"
@@ -656,18 +660,154 @@
 </div>
 
 
+
+
+<!--COMEÇANDO MODAL NOVO LIMITE DO DIA-->
+
+
+    
+<div class="mdc-dialog  mdc-dialog--fullscreen" id="meu-modal2">
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="my-dialog-title"
+      aria-describedby="my-dialog-content">
+      <div class="mdc-dialog__header h2-modal2 ">
+        <h2 class="mdc-dialog__title " id="my-dialog-title" style="font-weight: bold;">
+          Novo limite para outro dia
+        </h2>
+        <button class="mdc-icon-button material-icons mdc-dialog__close2"
+                data-mdc-dialog-action="close">
+          close
+        </button>
+      </div>
+      
+
+      <div class="mdc-dialog__content " id="my-dialog-content">
+
+        <div class="modal-limite">
+
+          <div class="mdc-select mdc-select--outlined modal-limite-tam">
+            <div class="mdc-select__anchor" aria-labelledby="outlined-select-label" style="height: 48px;">
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch">
+                  <span id="outlined-select-label" class="mdc-floating-label">Data do Evento</span>
+                </span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg
+                    class="mdc-select__dropdown-icon-graphic"
+                    viewBox="7 10 10 5" focusable="false">
+                  <polygon
+                      class="mdc-select__dropdown-icon-inactive"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon
+                      class="mdc-select__dropdown-icon-active"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+
+    
+        
+
+          <div class="mdc-select mdc-select--outlined modal-limite-tam">
+            <div class="mdc-select__anchor" aria-labelledby="outlined-select-label" style="height: 48px;">
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch">
+                  <span id="outlined-select-label" class="mdc-floating-label">Setor</span>
+                </span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg
+                    class="mdc-select__dropdown-icon-graphic"
+                    viewBox="7 10 10 5" focusable="false">
+                  <polygon
+                      class="mdc-select__dropdown-icon-inactive"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon
+                      class="mdc-select__dropdown-icon-active"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+
+    <div class="grid-container-limite">
+
+    <div class="mdc-text-field mdc-text-field--outlined modal-limite-inpt">
+      <input type="number" id="" class="mdc-text-field__input ">
+      <div class="mdc-notched-outline">
+          <div class="mdc-notched-outline__leading"></div>
+          <div class="mdc-notched-outline__notch">
+              <label for="my-input" class="mdc-floating-label">Limite</label>
+          </div>
+          <div class="mdc-notched-outline__trailing"></div>
+      </div>
+
+  </div>
+
+  <div class="mdc-touch-target-wrapper modal-limite-divbtn">
+    <button class="mdc-button mdc-button--touch modal-limite-btn  " style="color: white; background-color: black; border: 1px solid black; "  >
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__touch"></span>
+      <span class="mdc-button__label">+ Adicionar</span>
+    </button>
+</div>
+</div><!--grid-container-limite-->
+</div><!--modal-limite-->
+
+    
+  <div class="mdc-dialog__scrim"></div>
+</div>
+    
+</div>
+</div>
+</div>
+
+
+
 <footer><p> © 2023- SPR Sistemas de controle</p></footer>
 </div><!--container-content-main-->     
 </div><!--content-global-->
 
 
 
+
+
+
   
 <script> 
 
-   
+
 const openModalLink = document.getElementById('open-modal-link');
- const modal = document.querySelector('.mdc-dialog');
+ const modal = document.getElementById('meu-modal1');
   const BtnCancelar = document.getElementById('btn-cancelar')
  
  openModalLink.addEventListener('click', () => {
@@ -685,6 +825,20 @@ const openModalLink = document.getElementById('open-modal-link');
  BtnCancelar.addEventListener('click', () => {
     modal.classList.remove('mdc-dialog--open')
  })
+
+ const btnAbrirLimite = document.getElementById('btn-novo-limite');
+ const modal2 = document.getElementById('meu-modal2');
+
+ btnAbrirLimite.addEventListener('click', () => {
+  modal2.classList.add('mdc-dialog--open');
+ });
+
+ const closebutton2 = document.querySelector('.mdc-dialog__close2')
+ 
+ closebutton2.addEventListener('click', () => {
+  modal2.classList.remove('mdc-dialog--open');
+ });
+  
 
 
   const textFields = document.querySelectorAll('.mdc-text-field');
