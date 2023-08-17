@@ -1141,7 +1141,7 @@ tbody  td{
 
 .input-group-left,
 .input-group-right {
-  width: 49%; /* Ajuste conforme necessário */
+  width: 49%; 
 }
 
 .input-group-left {
@@ -1231,4 +1231,84 @@ tbody  td{
        border-radius: 8px;
        font-weight: bold;
     }
+  }
+
+
+
+  /* COMEÇANDO MODAL +LIMITE */
+
+  .modal-limite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+   }
+   
+   
+   .modal-limite-tam{
+     margin-bottom: 20px;
+     width: 450px;
+     height: 48px;
+     border-radius: 8px;
+   }
+   
+   .modal-limite-inpt{
+     margin-top: 5px;
+     width: 220px;
+     height: 48px;
+   }
+   
+   .modal-limite-btn{
+     width: 220px;
+     height: 48px;
+   }
+   
+   .grid-container-limite{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 10px;
+   }
+
+   #meu-modal2 .mdc-dialog__surface {
+    max-width: 50%; /* Defina a largura máxima que você deseja */
+  }
+
+
+  @media (max-width: 600px) {
+   
+    #meu-modal2 .mdc-dialog__surface {
+        max-width: 100%; /* Defina a largura máxima que você deseja */
+      }
+  
+    .modal-limite-tam,
+    .modal-limite-inpt,
+    .modal-limite-btn {
+      max-width: 100%; /* Largura total em dispositivos móveis */
+    }
+    
+   .grid-container-limite{
+    display: block;
+    
+  }
+
+  .modal-limite-inpt{
+    margin-top: 5px;
+    width: 325px;
+    height: 48px;
+  }
+  
+  .modal-limite-btn{
+    margin-top: 20px;
+    width: 325px;
+    height: 48px;
+  }
+
+  .h2-modal2{
+  margin-left: 30px;
+  }
+
+  .mdc-dialog__close2{
+  
+    margin-left: 70px;
+  }
   }
